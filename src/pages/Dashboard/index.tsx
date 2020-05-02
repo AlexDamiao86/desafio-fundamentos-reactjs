@@ -96,7 +96,7 @@ const Dashboard: React.FC = () => {
                   <td className={transaction.type}>
                     {transaction.type === 'income'
                       ? formatValue(Number(transaction.value))
-                      : formatValue(Number(-1 * transaction.value))}
+                      : `- ${formatValue(Number(transaction.value))}`}
                   </td>
                   <td>{transaction.category.title}</td>
                   <td>{formatDate(new Date(transaction.created_at))}</td>
